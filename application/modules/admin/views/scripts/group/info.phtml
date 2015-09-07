@@ -1,0 +1,105 @@
+<?php
+$group_name = $this->Item['group_name'];
+$avatar = $this->Item['avatar'];
+$ranking = $this->Item['ranking'];
+
+$group_acp = $this->Item['group_acp'];
+$group_default = $this->Item['group_default'];
+$create_by = $this->Item['create_by'];
+
+$created = $this->Item['created'];
+$modifiled = $this->Item['modifiled'];
+$modifiled_by = $this->Item['modifiled_by'];
+
+$status = $this->Item['status'];
+$order = $this->Item['status'];
+
+?>
+
+
+<form action="" method="POST" name="appForm">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <?php echo $this->render('group/toolbar/index.php'); ?>
+                <div class="box-body table-responsive padding">
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_name">Group Name</label>
+                        <div class="col-sm-3">
+                            <span class="label label-info"><?php echo $group_name ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="avatar">Avatar</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $avatar ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="ranking">Ranking</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $ranking ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Admin Control Panel</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $group_acp ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Group Default</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $group_default ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Create By</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $create_by ?></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Created</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $created ?></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Modifiled</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $modifiled ?></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Modifiled By</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $modifiled_by ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Status</label>
+                        <div class="col-sm-10">
+                            <span class="label label-info"><?php echo $status ?></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-12">
+                        <label class="col-sm-2 control-label" for="group_acp">Order</label>
+                        <div class="col-sm-3">
+                            <span class="label label-info"><?php echo $order ?></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- /.col -->
+    </div>
+</form>

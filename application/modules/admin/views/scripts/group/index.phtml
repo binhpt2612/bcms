@@ -1,0 +1,56 @@
+<form action="" method="POST" name="appForm">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <!--                
+                toolbar here
+                -->
+                <?php echo $this->render('group/toolbar/index.php');?>
+                <div class="box-body table-responsive no-padding">
+
+                    <table class="table table-condensed table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="col-xs-1"><input type="checkbox"></th>
+                                <th class="col-xs-3">Group </th>
+                                <th class="col-xs-1">Status</th>
+                                <th class="col-xs-1">ACP</th>
+                                <th class="col-xs-2">Order</th>
+                                <th class="col-xs-1">Member</th>
+                                <th class="col-xs-2">Control</th>
+                                <th>ID</th>
+                            </tr>
+                            <?php
+                            foreach ($this->Items as $key => $value):
+                                $id = $value['id'];
+                                $group_name = $value['group_name'];
+                                $status = $value['status'];
+                                $group_acp = $value['group_acp'];
+                                $order = $this->formText('order', $value['order'], array('style' => "width: 30px; text-align: center;"));
+                                $members = $value['members'];
+                                $linkInfo = $this->baseUrl($this->currentController . '/info/id/' . $id);
+                                $linkEdit = $this->baseUrl($this->currentController . '/edit/id/' . $id);
+                                $linkDelete = $this->baseUrl($this->currentController . '/delete/id/' . $id);
+                                ?>
+                                <tr>
+                                    <td><input type="checkbox" class="center"></td>
+                                    <td><span class="badge bg-light-blue"><?php echo $group_name ?></span></td>
+                                    <td><span class="label label-success">On</span></td>
+                                    <td><span class="label label-warning">Off</span></td>
+                                    <td><?php echo $order ?></td>
+                                    <td><span class="badge bg-green"><?php echo $members ?></span></td>
+                                    <td>
+                                        <a href="<?php echo $linkInfo ?>" title="Show Info"><i class="fa fa-info-circle"></i></a>
+                                        <a href="<?php echo $linkEdit ?>" title="Edit"><i class="fa fa-edit"></i></a>
+                                        <a href="<?php echo $linkDelete; ?>" title="Dellete"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                    <td><span class="badge bg-red"><?php echo $id ?></span></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.col -->
+    </div>
+</form>
